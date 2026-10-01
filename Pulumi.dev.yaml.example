@@ -1,0 +1,15 @@
+encryptionsalt: v1:REPLACE_ME:=v1:REPLACE_ME:REPLACE_ME
+config:
+  gcp:project: YOUR_GCP_PROJECT_ID
+  gcp:region: us-central1
+  pubsub:topicName: my-topic
+  pubsub:messageRetentionDuration: 86600s
+  pubsub:labels: '{"environment": "dev"}'
+  pubsub:subscriptionName: my-subscription
+  pubsub:ackDeadlineSeconds: "20"
+  pubsub:pushEndpoint: ""
+  pubsub:pushAttributes: '{}'
+  pubsub:expirationTtl: 86400s
+  pubsub:minRetryBackoff: 10s
+  pubsub:maxRetryBackoff: 600s
+  pubsub:enableMessageOrdering: "false"

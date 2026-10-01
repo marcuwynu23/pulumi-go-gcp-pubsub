@@ -1,0 +1,40 @@
+name: pulumi-go-gcp-pubsub
+description: Pulumi GCP Pub/Sub with topics and subscriptions
+runtime: go
+config:
+  gcp:region:
+    description: The region for Pub/Sub resources
+    value: us-central1
+  pubsub:topicName:
+    description: The name of the Pub/Sub topic
+    value: my-topic
+  pubsub:messageRetentionDuration:
+    description: The duration to retain messages in the topic
+    value: 86600s
+  pubsub:labels:
+    description: Labels for the topic (JSON)
+    value: '{"environment": "dev"}'
+  pubsub:subscriptionName:
+    description: The name of the Pub/Sub subscription
+    value: my-subscription
+  pubsub:ackDeadlineSeconds:
+    description: The acknowledgement deadline in seconds
+    value: '20'
+  pubsub:pushEndpoint:
+    description: The push endpoint URL (empty for pull subscription)
+    value: ''
+  pubsub:pushAttributes:
+    description: Attributes for the push configuration (JSON)
+    value: '{}'
+  pubsub:expirationTtl:
+    description: The TTL for the subscription expiration policy
+    value: 86400s
+  pubsub:minRetryBackoff:
+    description: The minimum retry backoff duration
+    value: 10s
+  pubsub:maxRetryBackoff:
+    description: The maximum retry backoff duration
+    value: 600s
+  pubsub:enableMessageOrdering:
+    description: Whether to enable message ordering
+    value: 'false'
